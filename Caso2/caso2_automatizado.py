@@ -85,11 +85,11 @@ class Red:
             r.setIP(ip_interna, prefixLen=24, intf=eth1)
             cmd = 'ip route add ' + ip_redHost + ' via ' + ip2
             self.r_central.cmd(cmd)
-            cmd1 = 'ip route add 10.0.0.0/21 via ' + ip
+            cmd1 = 'ip route add 10.0.0.0/18 via ' + ip
             r.cmd(cmd1)
             cmd2 = 'ip route add 192.168.100.0/24 via ' + ip
             r.cmd(cmd2)
-            cmd3 = 'ip route add 10.0.0.0/21 via ' + ip_interna
+            cmd3 = 'ip route add 10.0.0.0/18 via ' + ip_interna
             h.cmd(cmd3)
             cmd4 = 'ip route add 192.168.100.0/24 via ' + ip_interna
             h.cmd(cmd4)
